@@ -4,10 +4,12 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
       - name: working location
         run: |
           pwd
-          ls
+          ls -a
       - name: hello world Action
         id: greet
         uses: gr2m/hello-world-js-action@v1.x
