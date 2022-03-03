@@ -15,4 +15,4 @@ jobs:
           import platform
           print
           (platform.processor())
-        shell: python
+        shell: /usr/bin/python
