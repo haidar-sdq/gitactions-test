@@ -16,3 +16,12 @@ jobs:
           print
           (platform.processor())
         shell: /usr/bin/python
+    
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: powershell commands
+        run: Get-Location
+      - name: bash command
+        run: pwd
+        shell: bash
