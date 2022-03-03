@@ -4,10 +4,14 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: working location
+        run: |
+          pwd
+          ls
       - name: hello world Action
         id: greet
         uses: gr2m/hello-world-js-action@v1.x
         with:
           greeting: Haidar
       - name: greeting time
-        run: echo "${{steps.greet.outputs.time}}"
+        run: echo "${{ steps.greet.outputs.time }}"
